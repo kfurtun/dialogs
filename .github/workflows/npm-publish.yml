@@ -3,12 +3,9 @@
 
 name: Node.js Package
 
-on:
-  release:
-    types: [created]
+on: push
 
 jobs:
-
   publish-npm:
     runs-on: ubuntu-latest
     steps:
@@ -20,5 +17,3 @@ jobs:
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-
-  
