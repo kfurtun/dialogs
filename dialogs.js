@@ -4,14 +4,25 @@ function showDialog(content, title, onOkClick, onCancelClick, dialogType) {
   document.getElementById("dialog-content").innerText = content;
   document.getElementById("dialog-title").innerText = title;
 
-  document.getElementById("dialog-button-ok").onclick = function () {
-    onOkClick();
-    hideDialog();
-  };
-  document.getElementById("dialog-button-cancel").onclick = function () {
-    onCancelClick();
-    hideDialog();
-  };
+  if (onOkClick == undefined) {
+    document.getElementById("dialog-button-ok").style.display = "none";
+  } else {
+    document.getElementById("dialog-button-ok").style.display = "block";
+    document.getElementById("dialog-button-ok").onclick = function () {
+      onOkClick();
+      hideDialog();
+    };
+  }
+
+  if (onCancelClick == undefined) {
+    document.getElementById("dialog-button-cancel").style.display = "none";
+  } else {
+    document.getElementById("dialog-button-cancel").style.display = "block";
+    document.getElementById("dialog-button-cancel").onclick = function () {
+      onCancelClick();
+      hideDialog();
+    };
+  }
 
   if (dialogType == 1) {
     document.getElementById("dialog-frame").classList.add("success");
