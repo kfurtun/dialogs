@@ -39,7 +39,7 @@ function showDialog(content, title, onOkClick, onCancelClick, dialogType) {
     document.getElementById("dialog-icon-warning").style.display = "block";
   }
 }
-
+// this function hides the dialog
 function hideDialog() {
   document.getElementById("dialog-background").style.display = "none";
 }
