@@ -1,6 +1,6 @@
 {
   "name": "kutay-dialogs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple dialog library",
   "main": "index.js",
   "scripts": {

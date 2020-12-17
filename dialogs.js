@@ -40,6 +40,7 @@ function showDialog(content, title, onOkClick, onCancelClick, dialogType) {
   }
 }
 
+// this function hides the dialog
 function hideDialog() {
   document.getElementById("dialog-background").style.display = "none";
 }
