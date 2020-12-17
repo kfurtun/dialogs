@@ -1,0 +1,30 @@
+.dialog-background {
+  background-color: rgba(128, 128, 128, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.dialog-frame {
+  margin-top: 35vh;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+  max-height: auto;
+}
+.warning {
+  border: 1px solid yellow;
+}
+
+.success {
+  border: 1px solid green;
+}
+
+.fail {
+  border: 1px solid red;
+}
