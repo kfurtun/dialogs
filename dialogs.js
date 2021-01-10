@@ -1,4 +1,15 @@
 function showDialog(content, title, onOkClick, onCancelClick, dialogType) {
+  //content cannot be undefined --throw
+  if (content == undefined) {
+    throw new Error("Content cannot be undefined");
+  }
+  if (title == undefined) {
+    throw new Error("Title cannot be undefined");
+  }
+  if (dialogType > 3 && dialogType < 1) {
+    throw new Error("DialogType should be 1, 2 or 3");
+  }
+
   createDialog();
   document.getElementById("dialog-background").style.display = "block";
   document.getElementById("dialog-content").innerText = content;
